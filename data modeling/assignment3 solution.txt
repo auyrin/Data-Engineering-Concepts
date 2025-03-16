@@ -1,0 +1,59 @@
+assignment3_solution
+
+// create database named data_concepts
+use data_concepts
+
+// create users table and add a user document
+db.users.createOne({
+  "_id": ObjectId("64f1a2b3c8e9f0a1b2c3d4e5"),  // Unique user ID
+  "username": "john_doe",
+  "email": "john.doe@example.com",
+  "passwordHash": "hashed_password",  // Store hashed passwords for security
+  "firstName": "John",
+  "lastName": "Doe",
+  "bio": "Software Engineer | Tech Enthusiast",
+  "profilePicture": "https://example.com/profile.jpg",
+  "createdAt": ISODate("2023-09-01T12:00:00Z"),
+  "updatedAt": ISODate("2023-09-01T12:00:00Z"),
+  "posts": [
+    ObjectId("64f1a2b3c8e9f0a1b2c3d4e6"),  // Reference to post IDs
+    ObjectId("64f1a2b3c8e9f0a1b2c3d4e7")
+  ]
+})
+
+
+// create posts table and add a post document
+db.posts.createOne({
+  "_id": ObjectId("64f1a2b3c8e9f0a1b2c3d4e6"),  // Unique post ID
+  "userId": ObjectId("64f1a2b3c8e9f0a1b2c3d4e5"),  // Reference to the user who created the post
+  "content": "Just finished my first MongoDB project! 🎉",
+  "media": [
+    {
+      "type": "image",
+      "url": "https://example.com/project.jpg"
+    }
+  ],
+  "likes": [
+  ObjectId("64f1a2b3c8e9f0a1b2c3d4e8"),  
+  ObjectId("64f1a2b3c8e9f0a1b2c3d4e9")
+],
+
+  "createdAt": ISODate("2023-09-01T12:00:00Z"),
+  "updatedAt": ISODate("2023-09-01T12:00:00Z")
+})
+
+
+// create comments table and add a comment document
+db.comments.createOne({
+  "_id": ObjectId("64f1a2b3c8e9f0a1b2c3d4e9"),
+  "postId": ObjectId("64f1a2b3c8e9f0a1b2c3d4e6"),
+  "userId": ObjectId("64f1a2b3c8e9f0a1b2c3d4e8"),
+  "comment": "Great job!",
+  "createdAt": ISODate("2023-09-01T12:05:00Z")
+})
+
+
+// optimize our query perfomance by indexing our most used query nodes
+db.comments.createIndex({postId: 1})
+db.posts.createIndex({userId: 1})
+

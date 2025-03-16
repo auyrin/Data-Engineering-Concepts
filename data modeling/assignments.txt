@@ -1,0 +1,27 @@
+Assignment 1: Design a Normalized Relational Database
+🔹 Scenario: You are designing a database for an online bookstore. The database should store information about books, authors, customers, and orders.
+🔹 Tasks:
+- Identify entities (Book, Author, Customer, Order, etc.).
+- Define relationships (One-to-many, many-to-many).
+- Create an ER diagram (use tools like Draw.io, Lucidchart, or pen & paper).
+- Convert it into a normalized relational schema.
+
+
+
+Assignment 2: Create a Dimensional Model for a Data Warehouse
+🔹 Scenario: A retail company wants to build a sales data warehouse.
+🔹 Tasks:
+- Design a Star Schema with: 
+- A Fact Table (e.g., sales transactions).
+- Dimension Tables (e.g., customers, products, store locations).
+- Explain why you chose star schema over snowflake schema.
+
+
+
+Assignment 3: NoSQL Data Modeling (Document Store - MongoDB)
+🔹 Scenario: A social media app stores user profiles, posts, and comments.
+🔹 Tasks:
+- Design a document structure for MongoDB to store user profiles and their posts.
+- Use embedding vs. referencing in your design.
+- Write example MongoDB documents.
+
