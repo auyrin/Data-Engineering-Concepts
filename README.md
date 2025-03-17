@@ -13,4 +13,4 @@ I encourage you to try them on your own before looking at my solutions.
 - **prerequisites**: data-warehousing, relational-databases, noSQL(mongoDB)
 - **Use**: data modeling is the foundation for building efficient, maintainable, and scalable data systems. in other words, it's a critical concept for data engineering.
 - **how to proceed**: learn about the prerequisites if you haven't already. attempt the first assignment on your own. check it's solution. rinse-repeat
-
+- **resource for learning**: keep things simple. learn about data warehousing and relational databases from udemy. finish a MongoDb crash course on youtube.
