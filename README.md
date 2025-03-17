@@ -1,4 +1,5 @@
 # Data-Engineering-Concepts
+#### prerequisites: programming(python, java or scala), knowledge of SQL
 
 # contents
 - [Overview](#Overview)
